@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">UnsplashDemo</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="gallery_fragment_label">Photos</string>
+    <string name="details_fragment_label">Details</string>
+    <string name="photo_zoom_fragment_label">Zoom Photo</string>
+
+    <string name="location_template" translatable="false">%s, %s</string>
+    <string name="image_size_template" translatable="false">%s x %s</string>
+    <string name="title_likes">Likes</string>
+    <string name="title_downloads">Downloads</string>
+    <string name="title_views">Views</string>
+    <string name="exif_camera">Camera</string>
+    <string name="exif_focal_length">Focal Length</string>
+    <string name="exif_aperture">Aperture</string>
+    <string name="exif_shutter">Shutter Speed</string>
+    <string name="exif_iso">ISO</string>
+    <string name="exif_dimension">Dimension</string>
+    <string name="title_photos">Photos</string>
+    <string name="title_collection">Collections</string>
+    <string name="retry">Retry</string>
+
+    <!-- Content Description -->
+    <string name="desc_profile_picture">Profile Picture</string>
+    <string name="desc_image">Image</string>
+    <string name="desc_item_row_image">Item row image</string>
+
+    <!-- ERROR -->
+    <string name="error_no_connection">Something went wrong</string>
+    <string name="error_result_could_not_be_loaded">Result could not be loaded</string>
+    <string name="open_portofolio_link">Open Portofolio</string>
+</resources>

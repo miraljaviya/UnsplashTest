@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/GalleryFragment">
+
+    <fragment
+        android:id="@+id/GalleryFragment"
+        android:name="com.miral.unsplash.ui.gallery.GalleryFragment"
+        android:label="@string/gallery_fragment_label"
+        tools:layout="@layout/fragment_gallery">
+
+        <action
+            android:id="@+id/action_GalleryFragment_to_PhotoDetailsFragment"
+            app:destination="@id/DetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/DetailsFragment"
+        android:name="com.miral.unsplash.ui.photodetails.PhotoDetailsFragment"
+        android:label="@string/details_fragment_label"
+        tools:layout="@layout/fragment_photo_details">
+
+        <argument
+            android:name="photo"
+            app:argType="com.miral.unsplash.data.photo.model.Photo" />
+        <action
+            android:id="@+id/action_DetailsFragment_to_photoZoomFragment"
+            app:destination="@id/photoZoomFragment" />
+        <action
+            android:id="@+id/action_DetailsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoZoomFragment"
+        android:name="com.miral.unsplash.ui.photozoom.PhotoZoomFragment"
+        android:label="@string/photo_zoom_fragment_label"
+        tools:layout="@layout/fragment_photo_zoom" >
+        <argument
+            android:name="photo"
+            app:argType="com.miral.unsplash.data.photo.model.Photo" />
+        <action
+            android:id="@+id/action_photoZoomFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.miral.unsplash.ui.profile.ProfileFragment"
+        android:label="Profile" >
+        <argument
+            android:name="user"
+            app:argType="com.miral.unsplash.data.user.model.User" />
+    </fragment>
+</navigation>

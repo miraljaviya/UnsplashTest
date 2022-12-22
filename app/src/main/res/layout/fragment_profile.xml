@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <ImageView
+        android:id="@+id/iv_profile_picture"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:contentDescription="@string/desc_profile_picture"
+        app:layout_constraintStart_toStartOf="@+id/start_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_name"
+        style="@style/Theme.Unsplash.Subtitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/iv_profile_picture"
+        tools:text="Rizki Fajar" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_location"
+        style="@style/Theme.Unsplash.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tv_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        tools:text="Jakarta, Indonesia" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_bio"
+        style="@style/Theme.Unsplash.Body2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/end_guideline"
+        app:layout_constraintStart_toStartOf="@+id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_location"
+        tools:text="Jakarta based photographer shooting on Sony. Exploring different flavours of imagery to see what is the most fun http://notarealsite.com" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_photos"
+        style="@style/Theme.Unsplash.Headline6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/tv_title_photos"
+        app:layout_constraintEnd_toStartOf="@+id/tv_item_likes"
+        app:layout_constraintStart_toEndOf="@+id/iv_profile_picture"
+        app:layout_constraintTop_toTopOf="@+id/iv_profile_picture"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="3.4K" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_title_photos"
+        style="@style/Theme.Unsplash.Caption2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/title_photos"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_profile_picture"
+        app:layout_constraintEnd_toStartOf="@+id/tv_title_likes"
+        app:layout_constraintStart_toEndOf="@+id/iv_profile_picture"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_photos"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_likes"
+        style="@style/Theme.Unsplash.Headline6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/tv_item_collection"
+        app:layout_constraintStart_toEndOf="@+id/tv_item_photos"
+        app:layout_constraintTop_toTopOf="@+id/tv_item_photos"
+        tools:text="30K" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_title_likes"
+        style="@style/Theme.Unsplash.Caption2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/title_likes"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title_photos"
+        app:layout_constraintEnd_toStartOf="@+id/tv_title_collections"
+        app:layout_constraintStart_toEndOf="@+id/tv_title_photos"
+        app:layout_constraintTop_toTopOf="@+id/tv_title_photos" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_item_collection"
+        style="@style/Theme.Unsplash.Headline6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/end_guideline"
+        app:layout_constraintStart_toEndOf="@+id/tv_item_likes"
+        app:layout_constraintTop_toTopOf="@+id/tv_item_likes"
+        tools:text="1.9M" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_title_collections"
+        style="@style/Theme.Unsplash.Caption2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/title_collection"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title_likes"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toEndOf="@+id/tv_title_likes"
+        app:layout_constraintTop_toTopOf="@+id/tv_title_likes" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
